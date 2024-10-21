@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <title>Benchmark Platform</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./assets/images/epicode_logo.png" alt="epicode logo" />
+    </header>
+    <main>
+      <h1 class="index-h1">Welcome to <span>your exam</span></h1>
+      <h3>Instructions</h3>
+      <p class="intro-text">We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure of a few of them.</p>
+      <ul>
+        <li>Each question is <span>timed</span> and can only be <span>answered once</span>.</li>
+        <li>Changing browser tab or opening other windows will <span>invalidate the question</span>.</li>
+        <li>This exam will take approx. <span>0-5 minutes</span>.</li>
+      </ul>
+      <form id="proceed-form">
+        <label class="custom-checkbox">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          <span>I promise to answer myselft without help from anyone</span>
+        </label>
+        <button class="default-btn" type="submit">Proceed</button>
+      </form>
+      <div class="alert-container">
+        <div class="inner-alert">
+          <div class="close-container"><span class="alert-close">&times;</span></div>
+          <p class="alert-text">You must mark the promise to answer by yourself before to proceed!</p>
+        </div>
+      </div>
+    </main>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

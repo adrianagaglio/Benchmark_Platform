@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/benchmark.css" />
+    <link rel="stylesheet" href="./assets/css/results.css" />
+    <title>Benchmark Platform - Quiz</title>
+  </head>
+  <body>
+    <header class="benchmark-header">
+      <div><img class="logo" src="./assets/images/epicode_logo.png" alt="epicode logo" /></div>
+      <div>
+        <div id="timer-wrapper">
+          <svg width="100px" height="100px" viewBox="0 0 42 42" class="donut">
+            <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="transparent"></circle>
+            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="rgb(255  255 255 / 0.4)" stroke-width="3"></circle>
+            <circle
+              class="time-segment"
+              data-per="98"
+              cx="21"
+              cy="21"
+              r="15.91549430918954"
+              fill="transparent"
+              stroke="#00ffff"
+              stroke-width="3"
+              stroke-dasharray="99 1"
+              stroke-dashoffset="25"
+            ></circle>
+          </svg>
+          <span id="counter"></span>
+        </div>
+      </div>
+    </header>
+    <main class="benchmark-main">
+      <div class="benchmark-wrapper">
+        <form class="benchmark-form">
+          <label class="special-label" for="level">Choose quiz difficulty :</label>
+          <select id="level" name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <label class="special-label" for="question-number">How many questions?</label>
+          <div id="sliderToolTip">
+            <input id="question-number" type="range" name="howManyQuestions" min="5" max="10" value="5" step="1" />
+            <span id="tooltip">5</span>
+          </div>
+          <button id="submit-btn" class="default-btn active-btn" type="submit">Let's go!</button>
+        </form>
+        <div id="quiz-wrapper">
+          <h6 id="question-text">How can I create a <span>checkbox in HTML?</span></h6>
+          <div id="answers"></div>
+        </div>
+        <!-- sezione risultati -->
+        <div id="results-container">
+          <h2>Results</h2>
+          <h5>The summary of your answers:</h5>
+          <div id="center-page">
+            <div id="correct-answers">
+              <h4>Correct</h4>
+              <h4><span>50%</span></h4>
+              <p>4/6 questions</p>
+            </div>
+            <div id="chart-wrapper">
+              <svg width="300px" height="300px" viewBox="0 0 42 42" class="donut">
+                <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="transparent"></circle>
+                <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#c1158b" stroke-width="3"></circle>
+
+                <circle
+                  class="donut-segment"
+                  data-per="50"
+                  cx="21"
+                  cy="21"
+                  r="15.91549430918954"
+                  fill="transparent"
+                  stroke="#00ffff"
+                  stroke-width="3"
+                  stroke-dasharray="50 50"
+                  stroke-dashoffset="270"
+                ></circle>
+              </svg>
+              <div id="center-text">
+                <p>Congratulations! <span class="blueSpan">You passed the exam.</span></p>
+                <p class="small-text">We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)</p>
+              </div>
+            </div>
+            <div id="wrong-answers">
+              <h4>Wrong</h4>
+              <h4><span>50%</span></h4>
+              <p>2/6 questions</p>
+            </div>
+          </div>
+          <a class="default-btn result-btn" href="./feedback.html">Rate us</a>
+          <div id="report"></div>
+        </div>
+        <div class="alert-container">
+          <div class="inner-alert">
+            <p class="alert-text">Quiz is completed! We are preparing your result!</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="benchmark-footer">
+      <div class="question-counter">
+        <p>Question <span id="current-question">1</span> <span id="total-questions">/ 10</span></p>
+      </div>
+    </footer>
+    <script src="./js/questions.js"></script>
+    <script src="./js/benchmark.js"></script>
+  </body>
+</html>

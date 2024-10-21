@@ -1,0 +1,54 @@
+/* Paragrafo dell'homepage */
+.intro-text {
+  width: 580px;
+  min-width: 580px;
+  margin-bottom: 3rem;
+  line-height: 1.3rem;
+}
+
+/* Allinea gli elementi del form */
+#proceed-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Nasconde il campo input del checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+/* Creo un quadratino al posto dell'input */
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid white;
+  position: relative;
+  margin-right: 10px;
+}
+
+/* Creo il segno di spunta */
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: -1px;
+  width: 5px;
+  height: 12px;
+  border: solid #d20094;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Mostra il segno di spunta */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark:after {
+  display: block;
+}

@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  height: 100vh;
+}
+
+header,
+main {
+  width: 50%;
+  margin-inline: auto;
+}
+
+header {
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  height: 35px;
+}
+
+/* Stili dei titoli */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Outfit", sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h4 span {
+  font-weight: 900;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.index-h1 {
+  line-height: 4rem;
+  width: 400px;
+  min-width: 400px;
+  margin-bottom: 2.5rem;
+}
+
+.index-h1 span {
+  font-weight: 700;
+}
+
+h3 {
+  color: #d20094;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Stili per le liste */
+ul {
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+}
+
+li {
+  list-style: disc;
+  margin-bottom: 0.5rem;
+}
+
+li span {
+  font-weight: 600;
+}
+
+/* Stili generici per i form */
+form {
+  margin-top: 5rem;
+}
+
+form label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Stili per i bottoni */
+.default-btn {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.7rem 2.5rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 1px 1px 25px transparent;
+}
+
+.active-btn {
+  background-color: #00ffff;
+  color: #0b113b;
+  border: none;
+  box-shadow: 1px 1px 25px #00ffff;
+  font-weight: 900;
+}
+
+/* Stili per il modal popup */
+.alert-container {
+  display: none;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-alert {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 400px;
+  background-color: #6d2974;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
+}
+
+.close-container {
+  height: 10%;
+  text-align: right;
+  position: relative;
+  top: 10px;
+  right: 15px;
+}
+
+.alert-text {
+  text-align: center;
+  line-height: 1.3rem;
+  height: 80%;
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.alert-close {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
